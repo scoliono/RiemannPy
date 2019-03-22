@@ -1,6 +1,6 @@
 # RiemannPy
 
-A small Python program that visually approximates the area of a function over a given interval using a (Riemann sum)[https://en.wikipedia.org/wiki/Riemann_sum]. It can take left and right sums, and knows the Midpoint and Trapezoid Rules.
+A small Python program that visually approximates the area of a function over a given interval using a [Riemann sum](https://en.wikipedia.org/wiki/Riemann_sum). It can take left and right sums, and knows the Midpoint and Trapezoid Rules.
 
 It's really slow because it uses the Turtle library. But speed wasn't a priority since this is for an APCSP Performance Task.
 
