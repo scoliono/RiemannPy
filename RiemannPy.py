@@ -70,7 +70,7 @@ def draw_axes():
 Computes the function to be graphed.
 '''
 def calc_func(x):
-	return 1/(math.e**x)
+	return 1/(x+1)**2
 
 '''
 Sketches the function using a given number of intervals from Xmin to Xmax.
@@ -147,7 +147,8 @@ def calc_rect(method, x, dx):
 	return -1
 
 '''
-Draws the rectangles representing the Riemann sum. Returns the approximate total area.
+Draws the rectangles representing the Riemann sum and writes the sum on the screen.
+Returns the approximate total area.
 '''
 def draw_riemann_sum(subintervals, method=SumMethods.LEFT, color='black'):
 	grapher.goto(ORIGIN)
@@ -163,11 +164,11 @@ def draw_riemann_sum(subintervals, method=SumMethods.LEFT, color='black'):
 	# Show final sum
 	sum_text.clear()
 	sum_text.write('Sum: {0:.3f}'.format(total), font=('Arial', 16, 'normal'))
-
+	return total
 
 # Start
 if __name__ == '__main__':
 	draw_axes()
 	draw_func()
-	draw_riemann_sum(10, method=SumMethods.TRAPEZOID, color='red')
+	draw_riemann_sum(50, method=SumMethods.TRAPEZOID, color='red')
 	turtle.done()
